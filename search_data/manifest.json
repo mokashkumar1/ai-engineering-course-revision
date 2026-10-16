@@ -1,0 +1,8 @@
+{
+  "source_signature": "5d9808cba684e539e671f278590e326d455364cc9f733a91edabb2c5d8ed1f1a",
+  "passages": 1491,
+  "semantic": true,
+  "model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+  "built_at_utc": "2026-10-14T16:23:50.763566+00:00",
+  "source_report": "D:\\02_Development_Projects\\Ai Engineer Rivison\\audit_runs\\20261014T151834Z-484dc6\\audit_report.json"
+}

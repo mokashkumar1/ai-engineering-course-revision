@@ -8,8 +8,9 @@
 __pycache__/
 *.pyc
 
-# Local data & caches
-search_data/
+# Runtime data & caches
+search_data/answer_usage.sqlite
+search_data/qdrant/.lock
 .model_cache/
 .local/
 

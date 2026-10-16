@@ -1,16 +1,68 @@
-# RAG YT RIVISION
+# AI Engineering Course Revision Assistant
 
-Personal AI Engineer course revision assistant. Ask a question in English, Roman Urdu/Hindi, Hindi or Urdu; get a brief course-grounded answer and supporting lecture links. The answer language follows the question. Original transcripts remain internal and are never returned by the browser API.
+Personal AI Engineer course revision assistant with a modern dark chat interface, Groq-powered RAG, embedded Qdrant vector search, SQLite BM25, and synchronized YouTube lecture playback.
 
-## Run locally
+Ask questions in English, Roman Urdu/Hindi, Hindi, or Urdu; receive brief course-grounded answers with clickable timestamp citations that instantly seek and play the lecture video.
 
-```powershell
-.\Start-Demo.ps1
+---
+
+## ⚡ Quick Start (New Clones)
+
+### 1. Clone Repository
+```bash
+git clone https://github.com/mokashkumar1/ai-engineering-course-revision.git
+cd ai-engineering-course-revision
 ```
 
-Open http://127.0.0.1:8765. Use one server worker for embedded Qdrant.
+### 2. Configure Environment (Optional for AI answers)
+Copy the example environment file:
+```bash
+cp .env.example .env
+```
+Open `.env` and insert your [Groq API Key](https://console.groq.com/):
+```env
+GROQ_API_KEY=your_groq_api_key_here
+```
+*(Search continues to work via SQLite BM25 & Qdrant even without a Groq key).*
 
-Save a Groq key in the local, gitignored `.env` (see `.env.example`). Key changes are picked up without restarting. The default generation model is configurable with `GROQ_MODEL`. Search remains available when no key is configured, Groq is unavailable, or the answer quota runs out.
+---
+
+## 🚀 Running the App
+
+### Option A: One-Click (Windows)
+Double-click `run.bat` or run:
+```cmd
+.\run.bat
+```
+This automatically detects `uv` or `python`, installs required packages, initializes `.env`, and launches `http://127.0.0.1:8000`.
+
+### Option B: Using Astral `uv` (Recommended for fast sync)
+```bash
+# Sync dependencies into virtual environment
+uv sync
+
+# Start development server
+uv run uvicorn app:app --host 127.0.0.1 --port 8000 --reload
+```
+
+### Option C: Standard Python (Windows / macOS / Linux)
+```bash
+# Create and activate virtual environment
+python -m venv .venv
+
+# Windows:
+.\.venv\Scripts\activate
+# macOS/Linux:
+source .venv/bin/activate
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Start server
+uvicorn app:app --host 127.0.0.1 --port 8000 --reload
+```
+
+Open your browser at **http://127.0.0.1:8000**.
 
 ## Features
 
