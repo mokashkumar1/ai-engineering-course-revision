@@ -1,0 +1,764 @@
+जो लोग पहले का वीडियो नहीं देखे हैं, पहले का देख लीजिए।
+आज का नहीं समझ में आएगा।
+ऐसा मत कीजिए थेलॉजी मत कीजिए कि पहले वाला नहीं देखे आज करेंगे।
+आज यह पूरा प्रोजेक्ट एंड टू एंड बनाएंगे।
+आपका ये आप इसको अपने रिज्यूुमे में डालिएगा।
+कहीं भी डाल सकते हैं।
+अच्छा प्रोजेक्ट है।
+ठीक है?
+तो वीडियो के पहले पार्ट में सिस्टम आर्किटेक्चर आपको हम समझाएंगे और दूसरे
+पार्ट में प्र्ट लिखेंगे ताकि क्लॉड ये कोड लिख सके।
+तो इसमें आप आपको बहुत डीपली समझ में आएगा कि जब हम बोलते हैं कि क्लॉड से
+कोड लिखवाओ तो उसका मतलब क्या होता है?
+उसका ये मतलब नहीं होता है कि क्लॉड को जाके बोले कि राइट द कोड।
+नहीं नहीं वो नहीं होता है।
+ठीक है?
+तो फेलियर लोग करते हैं।
+कैसे किया जाता है?
+आपको बहुत डीपली समझाएंगे।
+तो पहले पहला पार्ट में तो समझेंगे कि प्रोजेक्ट है क्या?
+क्या है मेरे दिमाग में?
+दूसरे पार्ट में जो मेरे दिमाग में है उसको क्लॉड के दिमाग में कैसे घुसेड़ना
+है।
+तो चलिए शुरू करते हैं ज्यादा से।
+सबसे पहले जो स्टेप होता है ना वो होता है कि आप अपना सिस्टम आर्किटेक्चर अपने
+कॉपी में लिख सकते हैं कि नहीं?
+मतलब कि सिस्टम आर्किटेक्चर का क्या मतलब होता है ना?
+कोई फैंसी-वैंसी मत सीखिए कि ये करना है।
+हाई लेवल, लो लेवल वो सब कुछ नहीं होता है।
+जो भी आप बनाना चाह रहे हैं वो आपको समझ में आता है कि नहीं?
+मतलब आप उसको किसी को समझा बना सकते हैं कि नहीं।
+आपके दिमाग में उसका पिक्चर आ रहा है कि नहीं कि ठीक है ये ये ये ऐसा-सा होना
+चाहिए।
+तो सबसे पहले ना अपना सिस्टम आर्किटेक्चर कॉपी में बनाओ।
+उसके बाद उसको इंग्लिश में लिखना।
+डायरेक्ट लिखने लगेंगे तो कुछ ना कुछ भूल जाएंगे।
+तो देखिए मेरे हिसाब से इसका आर्किटेक्चर क्या है कि सबसे पहले एक
+यूजर का इनपुट आएगा जो हम देंगे।
+जो हम कमांड लाइन में लिखेंगे कि हमको दो चिकन बर्गर चाहिए और हमको 10 पीस
+चाहिए इसका।
+मतलब सॉरी चिकन बर्गर चाहिए और उसका 10 पीस चाहिए।
+मतलब डिश और क्वांटिटी।
+ठीक है?
+ये रिक्वेस्ट जो है यूजर की जो रिक्वेस्ट है जैसे आप Zomato पे जब
+ऑर्डर करते हैं तो इसको आप वो समझिए कि ये रिक्वेस्ट है।
+ये जाएगी हमारे एलएलएम के पास।
+ठीक है?
+एलएलएम आपका रिक्वेस्ट हो सकता है कि पैराग्राफ में हो कि हमको बहुत भूख लगी
+है और हमको चिकन बर्गर चाहिए और क्योंकि हम बहुत मोटे हैं तो हमको 10 पीस चाहिए।
+एलएलएम को उसमें से एक्सट्रैक्ट क्या करना है?
+कि इस आदमी का ऑर्डर क्या है?
+इस आदमी का ऑर्डर क्या है?
+कौन सी डिश मांग रहा है?
+कितने पीस उसका मांग रहा है?
+ठीक है?
+अभी सिंपलीसिटी के लिए अस्यूम कर लीजिए कि कोई भी आदमी जब ऑर्डर करता है तो वो
+एक ही डिश ऑर्डर करता है।
+मल्टीपल भी कर सकता है।
+लेकिन अभी के लिए मान लीजिए सिंपलीसिटी के लिए कि कोई भी आदमी जब करता है तो वो
+एक ही डिश ऑर्डर करता है।
+अच्छा इसके अलावा कोई कन्वर्सेशन एलएलएम को एंटरटेन नहीं करना है।
+फॉर एग्जांपल अगर कोई यूजर बोल रहा है Zomato के एलएलएम को जाके कि हमको थ्री
+सम का कोड दे दो तो उसको एंटरटेन नहीं करना है।
+उसको कोड वापस नहीं देना है।
+ठीक है?
+तो केवल डिश और उसका क्वांटिटी कंसीडर करना है।
+अच्छा।
+जब एलएलएम निकाल लेगा।
+एलएलएम क्या निकाल लेगा इससे?
+एलएलएम इस आदमी का डिश और उसकी क्वांटिटी निकाल लेगा।
+एलएलएम उसकी डिश और उसकी क्वांटिटी निकाल लेगा।
+अच्छा ये चीज़ कहां जाएगी?
+ये चीज़ एलएलएम से जाएगी एक ऑर्डर कंफर्म पे।
+एक ऑर्डर कंफर्म पे जो कि हमारा एक नोड मान लीजिए इसको लैंड ग्राफ में यहां पे
+जाएगी ऑर्डर कंफर्म में।
+ऑर्डर कंफर्म का क्या काम रहेगा?
+ऑर्डर कंफर्म का काम रहेगा कि ये एक मेन्यू को देखेगा।
+हमारे मेन्यू में क्या लिखा रहेगा?
+डिश का नाम कितने अवेलेबल उसके पीसेस हैं और उसकी एक क्वांटिटी की प्राइस
+क्या है।
+मतलब चिकन बर्गर है।
+चिकन बर्गर 20 पीस बचा हुआ है और एक बर्गर का प्राइस ₹60 है।
+तो मेन्यू में ये लिखा रहेगा।
+ऑर्डर कंफर्म।
+ऑर्डर कंफर्म क्या करेगा?
+अ ऑर्डर कंफर्म क्या करेगा कि अगर ये मेन्यू में अवेलेबल है।
+अब ऑर्डर कंफर्म में ना तीन केसेस हो सकते हैं।
+ऑर्डर कंफर्म में तीन केसेस हो सकते हैं।
+केस वन कि जो भी यूजर मांग रहा है वो फुल्ली अवेलेबल है।
+वो फुल्ली अवेलेबल है।
+मतलब अगर कोई यूजर दो पीस बर्गर मांग रहा है तो हो सकता है कि आप दोनों पीस
+बर्गर उसको दे सकते हैं।
+इसका मतलब फुल अवेलेबल एकदम बिल्कुल कंफर्म किया जा सकता है।
+इस केस में उसका स्टेटस हो जाएगा कंफर्म्ड।
+इस केस में उसका स्टेटस हो जाएगा कंफर्म्ड।
+दूसरा केस क्या हो सकता है?
+पार्शियली अवेलेबल है।
+दूसरा केस हो सकता है पार्शियली अवेलेबल है।
+पार्शियली अवेलेबल का क्या मतलब है?
+कि यूजर पांच चिकन बर्गर मांग रहा था।
+लेकिन आपके मेन्यू में आपको दिख रहा है कि मेरे पास तीन ही चिकन बर्गर है।
+तो इसका मतलब क्या है?
+कि आपका ऑर्डर पार्शियली अवेलेबल है।
+मेरे पास फुल्ली अवेलेबल नहीं है।
+अच्छा ये हो सकता है।
+तीसरा केस क्या हो सकता है?
+नॉट अवेलेबल।
+जो डिश यूजर मांग रहा है वो अवेलेबल ही नहीं है।
+ये कैसे हो सकता है?
+कोई यूजर हाथी का सैंडविच मांग रहा है।
+मेरे पास हाथी का सैंडविच है ही नहीं तो नॉट अवेलेबल है।
+कोई यूजर एक पीस चिकन बर्गर मांग रहा है।
+लेकिन मेरे मेन्यू में एक भी पीस चिकन बर्गर नहीं है।
+जीरो पीस अवेलेबल है।
+तो इस केस में उसका आर्डर एकदम अवेलेबल नहीं हो सकता है।
+अच्छी बात है।
+ये चीजें आर्डर कंफर्म किसी वाइट बोर्ड पे लिखेगा या कुछ भी करेगा।
+ये वापस एलएलएम पे जाएगी।
+ये वापस एलएलएम पे जाएगी।
+अब एलएलएम को डिसीजन लेना है।
+अगर तो अगर तो कंफर्म्ड है आर्डर अगर आर्डर कंफर्म हो चुका है।
+अगर आर्डर कंफर्म हो चुका है तो क्या करेगा?
+एलएलएम सीधा कुक को कॉल कर देगा।
+सीधा कुक को कॉल कर देगा कि हां भाई चलो आर्डर कंफर्म हो चुका है।
+ये आर्डर बनाओ।
+अगर ऑर्डर पार्शियली अवेलेबल है।
+अगर ऑर्डर पार्शियली अवेलेबल है।
+मतलब कि आप पांच बर्गर मांग रहे थे।
+एक ही बर्गर मेरे पास अवेलेबल है।
+इस केस में एलएलएम को वापस यूजर से पूछना पड़ेगा।
+वापस यूजर से पूछना पड़ेगा और उसको बताना पड़ेगा कि सुनो भैया तुम पांच
+बर्गर मांगे थे।
+मेरे पास एक ही बर्गर अवेलेबल है।
+अब तुमको क्या करना है?
+तो यूजर या तो बोल सकता है कि ठीक है हम नया ऑर्डर देंगे।
+छोड़ दो हमको एक बर्गर नहीं चाहिए।
+हम पिज़्ज़ा का ऑर्डर देना चाहते हैं।
+वो एक सिनेरियो है।
+दूसरा सिनेरियो क्या है?
+यूजर बोल रहा है कि छोड़ो छोड़ो छोड़ो।
+ठीक है?
+पार्शियल अवेलेबल है ना?
+जो है वो दे दो।
+दो चीज हो सकती है ना।
+अगर कोई यूजर पांच बर्गर मांगा है।
+आप उसको बोल रहे हैं कि बर्गर तो है एक ही है।
+लेकिन तो यूजर बोल सकता है कि हटाओ हमको बर्गर नहीं।
+हमको नया ऑर्डर प्लेस करना है।
+अच्छी बातें करिए।
+अगर यूजर बोल रहा है कि नहीं नहीं ठीक है जो है वही दे दो तो दो केस हो सकता
+है।
+अगर यूजर बोलता है कि हमको नया आर्डर प्लेस करना है तो यह पूरा साइकिल फिर से
+चालू होगा।
+ये पूरा साइकिल फिर से चालू होगा।
+यही हो सकता है।
+और हां तीसरा केस नॉट अवेलेबल नॉट अवेलेबल में भी सेम काम होगा कि यूजर को
+आप बोलेंगे कि जो आप मांग रहे हैं वो अवेलेबल ही नहीं है।
+आप नया आर्डर ही प्लेस करिए।
+तो जैसे ही ऑर्डर नया अवेलेबल नया आर्डर प्लेस करता है तो ये पूरा साइकिल या
+आर्डर कंफर्म वाला फिर से शुरू होगा।
+अगर यूजर बोलता है की चलो जो है वो दे दो।
+या तो आर्डर अगर फुल्ली अवेलेबल है तब तो कोई बात ही नहीं है चिंता की।
+अगर ऐसा आता है, तो इसको जाना चाहिए कुक पे।
+कुक के पास भी दो केसेस हो सकते हैं।
+या तो सक्सेसफुली वो कुक हो जाए।
+अगर वो सक्सेसफुली कुक हो जाए या फिर कुक के गलती के कारण कुक के गलती के
+कारण तेल खत्म हो गया, मसाला खत्म हो गया।
+वो कुक फेल हो जाए।
+मतलब चिकन बर्गर था अवेलेबल।
+कुक के पास गया।
+अब कुक की गलती हो गई।
+तवा गिर गया, कुछ भी हो गया।
+किचन में आग लग गया, कुछ भी हो सकता है।
+तो वो फेल हो गया।
+अगर कुक सक्सेस हो जाता है।
+अगर कुक सक्सेसफुली कर लेता है तब तो क्या होना चाहिए?
+इसको ऑर्डर का स्टेटस अपडेट कर देना चाहिए और इसको कुक्ड बोल देना चाहिए।
+कुक्ड या रेडी बोल देना चाहिए।
+है ना?
+अगर कुक सक्सेसफुल कर देता है तो इसको स्टेट में रेडी कर देना चाहिए डिश को।
+और इसके बाद क्या कॉल होना चाहिए?
+सर्व।
+इसके बाद होना चाहिए सर्व कॉल।
+अब सिमिलरली सर्व में भी दो केस है।
+या तो वो सक्सेसफुली सर्व कर देता है जाके यूजर को।
+उस केस में बहुत अच्छी बात है।
+इस केस में ऑर्डर का स्टेटस कंप्लीट हो जाना चाहिए कि चलो भैया ऑर्डर कंप्लीट
+हो गया।
+अब यहां पे आती है कि सर्व भी फेल कर सकता है।
+सर्व फेल करने का क्या मतलब है कि वेटर किचन से लेके निकला और प्लेट गिर गया।
+कुछ भी हो सकता है।
+जोatो में ऑर्डर बन के डिलीवरी में निकला और डिलीवरी वाले का स्कूटी खराब
+हो गया तो वो फेल हो गया।
+डिलीवरी फेल हुआ है।
+कुकिंग फेल नहीं हुई है।
+अच्छा तो अगर सर फेल हो जाता है तो क्या होना चाहिए?
+इस केस में हम चाहते हैं कि एक और बार कुक को कॉल किया जाए।
+एक और बार कुक को कॉल किया जाए कि भैया मेरे से डिलीवरी में गलती हो गया।
+आप एक बार और बनाने की कोशिश कर लीजिए।
+तो कुक एक बार और बनाने की कोशिश करेगा।
+अगर वो कुक सक्सेस हो गया वापस सर्व को कॉल किया जाएगा।
+अच्छा अगर कुक फेल हो गया तो क्या होगा कि सब कुछ हो चुका था।
+कुकिंग नहीं फेल हो गया।
+इस केस में कुक अपने आप को एक बार और रीिटाई करेगा।
+एक रिटाई और करेगा कुक कि चलो ठीक है इस बार तवा गिर गया था।
+एक और बार हम कोशिश करके देख लेते हैं।
+अगर उसमें भी फेल हो गया तब क्या होना चाहिए?
+तब ये वापस एलएलएम को जाना चाहिए और एलएलएम को यूजर से माफी मांग के इसका
+ऑर्डर रिफंड कर देना चाहिए।
+कुक दो बार फेल हो गया ना?
+आप गए किचन में बनाने।
+पहला बार चिकन बर्गर बनाने गए।
+गिर गया तवा।
+कोई बात नहीं।
+एक बार और ट्राई कर लो।
+दूसरी बार बनाने गए तेल खत्म हो गया।
+दूसरा बार भी कुक फेल हो गया।
+इस केस में एलएलएम को यूजर से माफी मांग के उसका पैसा रिफंड कर देना चाहिए।
+हां।
+अगर सर् भी दो बार फेल हो गया।
+मतलब एक बार डिलीवरी वाला निकला खाना लेके स्कूटी खराब हो गया।
+कोई बात नहीं।
+वो वापस कुक को बोला कि भैया एक बार और बना दीजिए।
+कुक एक बार और बना के उसको दे दिया।
+दूसरी बार भी इसका स्कूटी फेल हो गया।
+तो इस केस में भी एलएलएम को इस केस में भी एलएलएम को यूजर से माफी मांग लेनी
+चाहिए।
+इस केस में भी एलएल को यूजर से माफी मांग लेनी चाहिए।
+इसको क्या बोला जाता है?
+इसको रीिट्राई अटेम्प्ट बोला जाता है।
+इसको रीटाई अटेम्प्ट बोला जाता है कि कोई भी नोड कितनी बार रीट्राई करेगा।
+ऐसा तो नहीं हो सकता है ना कि कोई इनफाइनाइट Times रीट्राई मतलब बार-बार
+डिलीवरी वाला गलती कर रहा है और बार-बार कुक वाला कुक बना रहा है।
+तो इससे तो वेस्टेज होगी ना।
+तो एक रीटाई लिमिट रखना पड़ेगा ना कि भाई देखो दो गलती अलाउड है या एक गलती
+अलाउड है।
+उसी तरीके से ऑर्डर में भी मान लीजिए कोई यूजर बार-बार ऐसा चीज मांग रहा है
+जो होता ही नहीं है जो एक एक्सिस्ट ही नहीं करता है।
+हमको हाथी का सैंडविच चाहिए।
+फेल हो गया।
+अच्छा कोई बात नहीं।
+एक और बार ट्राई करो।
+हमको घोड़े का सैंडविच चाहिए।
+फेल हो गया।
+कोई बात नहीं।
+एक और बार ट्राई करो।
+हमको चीता का सैंडविच चाहिए।
+अगर अगर अगर ऑर्डर करने में तीन फेलियर होता है।
+आर्डर कंफर्म में अगर आर्डर कंफर्म में तीन फेलियर होता है तो क्या होना चाहिए?
+तो भी एलएलएम को यूजर से माफी मांग लेनी चाहिए कि भैया आप जो आर्डर कर रहे हैं
+हमारे पास नहीं है।
+आप कोई और रेस्टोरेंट देखिए।
+तो इसमें भी एक लिमिट आपको रखनी पड़ेगी कि कितनी बार आप आर्डर लेंगे उससे।
+कितनी बार आप रीटाई करेंगे बार-बार?
+क्योंकि अगर आप ये सब नहीं सोचेंगे कि तब ये होता रहेगा।
+तब ये लगातार होता रहेगा।
+तब क्या होगा ना?
+मान लीजिए कोई हैकर है।
+मान लीजिए वो बार-बार कोई ऐसा खाना मांग रहा है जो एक्सिस्ट नहीं करता है।
+वो बोल रहा है कि हमको मान लीजिए एलियन वाला खाना चाहिए।
+अगर आप बिना रीटाई लिमिट के बार-बार बार-बार ऑर्डर कंफर्म को कॉल करते
+रहेंगे।
+बार-बार एलएलएम उसको पढ़ते रहेगा तो आपका सिस्टम हैंग कर जाएगा।
+इसीलिए किसी भी सिस्टम में एक रीिट्राई लिमिट होता है कि इसके बाद रीटाई नहीं
+किया जाएगा।
+ये मेरी लिमिट है।
+तो ये एक रफ आर्किटेक्चर है जो मेरे दिमाग में है।
+आपके दिमाग में भी आपका आर्किटेक्चर जरूरी नहीं है कि एग्जैक्टली यही हो।
+आप अपने हिसाब से करिए।
+आप मतलब बोलेंगे कि नहीं ऑर्डर कुछ भी हो ऑर्डर में 10 रीटाई अटेम्प्ट अलाउड
+है।
+अगर कुक फेल हो गया तो इमीडिएटली हम खत्म कर देंगे।
+एक और बार कोशिश भी नहीं करेंगे।
+अगर सर फेल हो गया तो हम इमीडिएटली खत्म कर।
+आपका जो भी आर्किटेक्चर वो आपकी चॉइस है।
+लेकिन आपका जो भी थॉट प्रोसेस है वो बहुत क्लियर होना चाहिए।
+इसके के बाद ये होगा, ये होगा, ये होगा, ये होगा और इसको बहुत क्लियरली आपको
+क्लॉड या चार्ट जीपीटी को बताना पड़ेगा कि हम ये चाहते हैं और एग्जैक्टली ऐसा
+होना चाहिए।
+तुमको अपने से दिमाग लगाने की जरूरत नहीं है।
+अगर आप इतने डिटेल में नहीं बताएंगे क्लॉड को तो क्लॉड अपना दिमाग लगाने
+लगेगा और वो आपको समझ में नहीं आएगा।
+ठीक है?
+एक बात हमेशा याद रखिएगा कि लोग बोलते हैं कि ठीक है क्लॉड जो कोड दिखेगा हम
+कोड पढ़ लेंगे।
+ये पॉसिबल नहीं है।
+अगर क्लॉड एक 000 लाइन का कोड लिख दिया ना तो आप 1000 लाइन का कोड नहीं पढ़
+पाएंगे।
+उसको पढ़ने में आपको 4 दिन लग जाएगा।
+तो कोड लिखवाने के बाद सोचना कि हुआ कि नहीं मेरे हिसाब से इससे अच्छा कि उसको
+बताने के समय ही इतनी क्लियर भाषा में बताइए कि वो गलती ना कर सके।
+क्लॉड को एक जूनियर इंजीनियर की तरह समझिए जिसको आपको बहुत क्लियर
+इंस्ट्रक्शन देना है कि हम ऐसा सिस्टम चाहते हैं और एग्जैक्टली ऐसा सिस्टम
+चाहते हैं।
+अच्छी बात है।
+अच्छा।
+एक बार ये सिस्टम आर्किटेक्चर हो गया।
+उसके बाद आते हैं स्टेट पे आपके लैंग ग्राफ में स्टेट होता है।
+स्टेट का मतलब एक वाइट बोर्ड।
+स्टेट का मतलब एक वाइट बोर्ड।
+अब वाइट बोर्ड पे नोट्स लिखते हैं अपना अपडेट कि हम ये काम किए थे।
+ये काम करने के बाद फलाना फलाना चीजें हुई।
+तो यहां पे आप क्या लिखेंगे?
+सबसे पहले तो हम एक चाहते हैं कि यूजर और एलएलएम के बीच के मैसेजेस लिखे जाते
+रहें।
+बीच के मैसेजेस लिखे जाते रहें।
+मतलब यूजर के तरफ से क्या रिक्वेस्ट आई थी?
+एलएलएम को क्या एलएलएम उसको क्या रिस्पांस दिया था?
+था तो यूजर और एलएलएम के बीच का मैसेज हम चाहते हैं कि वाइट बोर्ड पे लिखे
+कोई।
+अच्छा दूसरा ऑर्डर डिटेल्स।
+दूसरा ऑर्डर डिटेल्स।
+ऑर्डर डिटेल्स मतलब जो डिश रिक्वेस्टेड हुई थी स्ट्रिंग तरीके की।
+जो क्वांटिटी रिक्वेस्ट किया है यूजर किसकी तरीके की?
+स्ट्रिंग तरीके की।
+और इसकी अवेलेबल क्वालिटी अवेलेबल क्वांटिटी क्या है मेरे पास?
+ये इंटीजर सॉरी ये भी इंटीजर।
+इसका क्या फायदा होगा?
+इसका क्या फायदा होगा?
+मान मान लीजिए कोई आदमी बर्गर मांगता है 10 पीस तो ऑर्डर में क्या लिखा रहेगा कि
+डिश में बर्गर चाहिए और क्वांटिटी में 10 पीस चाहिए।
+अब ऑर्डर कंफर्म जो है ना ये मेन्यू देखा और इसको पता चला कि चिकन बर्गर
+पांच ही पीस है तो ये आदमी क्या करेगा?
+डिश और क्वांटिटी को नहीं बदलेगा।
+अवेलेबल के जगह लिख देगा कि मेरे पास पांच पीस है।
+इसका फायदा क्या होगा?
+कि जब वहां से रिस्पांस आएगा तो एलएलएम डायरेक्टली स्टेट को पढ़ के यूजर से
+बातचीत कर सकता है कि देखिए भैया आप जो डिश मांगे थे वो है।
+आप जो क्वांटिटी मांगे थे है लेकिन वो वो पार्शियली अवेलेबल है।
+आप 10 पीस मांग रहे थे।
+मेरे पास पांच पीस अवेलेबल है।
+आपको पांच पीस चाहिए।
+तो इसका फायदा ये होगा।
+अगली चीज हम क्या लिखेंगे?
+स्टेटस।
+स्टेटस हर एक नोड जब कोई काम कर लेगा तो इसका स्टेटस अपडेट करेगा।
+फॉर एग्जांपल अगर ऑर्डर कंफर्म बोलता है कि इसका ऑर्डर कंफर्म हो चुका है तो वो
+स्टेटस में कंफर्म लिख देगा।
+अगर वो बोलता है कि ये पार्शियली कंफर्म्ड है तो वो इसमें पार्शियल लिख
+देगा।
+अगर उसको लगता है कि ये अवेलेबल हो ही नहीं सकता है।
+इसको तो बिल्कुल नहीं किया जा सकता है तो वो उसको नॉट अवेलेबल या ऐसा कुछ लिख
+देगा।
+सिमिलरली जब कुक के पास जाएगा अगर कुक उसको बना देता है तो वो स्टेटस में रेडी
+लिख देगा।
+अगर वो कुक नहीं बना पाता है रिटाई के बाद भी तो वो स्टेटस में कुक फेल लिख
+देगा।
+सिमिलरली सर्व के पास जाता है।
+अगर सर्व सक्सेसफुल हो जाता है तो वो स्टेटस में कंप्लीट लिख देगा।
+अगर सर्व में कोई गलती हो जाती है।
+सर्वी डिलीवरी फेल हो जाती है तो वो हो सकता है कि यहां पे सर्व फेल लिख दे।
+इससे फायदा क्या होता है ना कि हर एक आदमी को पता चलता रहता है कि पूरे में
+क्या हो रहा है।
+हर एक आदमी मतलब एलएलएम से लेके ऑर्डर कंफर्म से लेके किचन से लेके डिलीवरी
+बॉय तक सबको दिखता रहता है कि क्या हो रहा है।
+कहां क्या हो रहा है।
+जब आप जोमैटो पे ऑर्डर करते हैं तो आपको दिखता है ना जब आप ऑर्डर प्लेस करते हैं
+तो आपका आपका स्क्रीन पे दिखता है कि ऑर्डर इज प्लेस्ड।
+फिर आपको दिखता है ऑर्डर इज़ कंफर्म्ड।
+फिर आपको दिखता है ऑर्डर इज़ अंडर प्रिपरेशन।
+फिर आपको दिखता है ऑर्डर इज़ आउट डिलीवरी।
+फिर लास्ट में आपको दिखता है ऑर्डर इज डिलीवर्ड।
+तो इसका क्या फायदा होता है?
+हर आदमी को, हर स्टेक होल्डर को, हर नोड को दिखता रहता है बोर्ड पे कि हां भाई
+ये हो रहा है, ये हो रहा है, ये हो रहा है, ये हो रहा है, ये हो रहा है।
+तो हर आदमी अपने हिसाब से डिसीजन ले सकता है।
+अच्छा।
+और क्या लिखेंगे इस वाइट बोर्ड पे?
+सबके रीटाई अटेमप्ट्स।
+सबसे पहले ऑर्डर अटेमप्ट्स।
+कितने ऑर्डर आप अलऊ करते हैं इससे पहले कि आपका सिस्टम बंद हो जाए?
+हम इसको बोलते हैं कि हम इसको तीन अलऊ करेंगे।
+मतलब आप तीन बार गलत ऑर्डर दे सकते हैं।
+अगर आप तीनों बार ऐसा आर्डर दिए जो कि नहीं हो पाएगा पॉसिबल।
+फॉर एग्जांपल आप बोले कि हमको चिकन बर्गर चाहिए पांच पीस।
+उधर से रिस्पांस आया सर पांच पीस नहीं है।
+दो पीस है।
+आप बोले नहीं नहीं छोड़ो हम रीटाई करेंगे।
+पिज़्ज़ा दो हमको दो पीस।
+उधर से रिस्पांस आया सर पिज़्ज़ा अवेलेबल नहीं है।
+फिर से करिए।
+आप बोले अच्छा ठीक है।
+हमको नूडल्स दे दो।
+तीन प्लेट।
+उधर से आया नहीं सर तीन प्लेट नहीं है।
+एक प्लेट है।
+इसके बाद भी अगर आप बोल रहे हैं कि नहीं हमको ये नहीं हमको ये नहीं चलेगा।
+हमको कुछ और करना है।
+सिस्टम बंद हो जाएगा।
+सिस्टम बंद हो जाएगा।
+मतलब तीन चांस आपको मिलेगा।
+अगर आप तीनों चांस भी अपना वेस्ट कर देते हैं।
+तीनों चांस में आप अग्री नहीं करते हैं कि हमको ये नहीं चाहिए तो आपका रीटाई
+अटेम्प्ट वहीं पे खत्म हो जाएगा।
+सिस्टम बंद हो जाएगा।
+अच्छा।
+दूसरा क्या है?
+कुक अटेम्प्ट्स।
+कुक अटेम्प्ट्स मतलब कितनी बार किचन ट्राई करेगा?
+किचन को आर्डर मिला।
+चिकन बर्गर बनाओ।
+किचन ट्राई किया मतलब कुक ट्राई किया बनाने का।
+फेल हो गया।
+ये एक अटेम्प्ट है।
+ये एक अटेम्प्ट है।
+कितना अटेम्प्ट है?
+एक अटेम्प्ट है।
+अच्छा।
+एक अटेम्प्ट के बाद एक अटेम्प्ट के बाद सॉरी यहां पे दो लिख देते हैं।
+ये एक अटेम्प्ट हो गया।
+फेल हो गया।
+एक बार और ट्राई करो।
+एक बार और ट्राई करो।
+दूसरी बार भी अगर फेल हो जाता है।
+दूसरी बार भी अगर किचन में गलती हो जाती है बंद कर दो।
+यूजर को बोल दो कि अब आपका नहीं बन पाएगा।
+इसका क्या मतलब है?
+कुक दो बार अटेम्प्ट करेगा।
+अच्छा।
+दूसरा सर्व अटेमप्ट्स।
+सर्व अटेमप्ट्स।
+सेम दो बार।
+पहली बार डिलीवरी बॉय निकला खाना लेके।
+पहली बार में खाना गिर गया।
+स्कूटी खराब हो गई।
+कोई बात नहीं।
+एक अटेम्प्ट हो गया।
+दूसरी बार जब निकला अगर दूसरी बार भी डिली बॉय से गलती हो जाती है।
+आपका सिस्टम एंड पे चला जाएगा।
+बंद हो जाएगा।
+आपका सिस्टम एलएलएम यूजर को सॉरी बोल देगा।
+तो ये भी है सेकंड अटेम्प्ट।
+अब फॉर एग्जांपल फॉर एग्जांपल अ हो सकता है कि कुक दो बार फेल हो चुका हो।
+सर भी फेल हो गया।
+सर दोबारा कुक को बोला कि एक बार और बनाइएगा क्या?
+तो कुक बोलेगा कि नहीं जी हम एक बार ऑलरेडी रीटाई कर चुके हैं।
+अब हम नहीं बनाएंगे।
+सिस्टम खत्म हो जाएगा।
+इसका क्या मतलब है?
+मान लीजिए कुक से एक बार गलती हो गई।
+अपना एक अटेम्प्ट यूज़ कर लिया।
+ठीक है?
+अब ये सर्व को दिया।
+सर से गलती हो गई।
+सर कुक को वापस भेजा कि सर एक बार और बना लीजिए ना।
+लेकिन कुक बोलेगा कि नहीं नहीं नहीं हम ऑलरेडी एक बार रीट्राई कर चुके हैं।
+बोल दो कि नहीं हो पाएगा।
+तो अगेन ये बोल जाएगा।
+ये आपका डिसीजन है।
+ये मेरा डिसीजन नहीं है।
+ये हम कोई रूल नहीं बनाया है कि ऐसा ही होता है।
+ये किसी किताब में नहीं लिखा हुआ है कि ऐसे करना है।
+ये आपका डिसीजन है।
+जब आप कोई सिस्टम बनाते हैं तो यही सब डिसीजन आपको लेना पड़ता है।
+फाइनली जाके एक रिजल्ट आएगा कि रिजल्ट में हुआ क्या?
+वेदर द ऑर्डर वाज़ कंप्लीट और वेदर इट वाज़ इनकंप्लीट।
+अलोंग विथ ए रीज़ अलोंग विथ ए रीज़ कि इसका रीज़ क्या था इस ऑर्डर का?
+कंप्लीट हो गया।
+बहुत अच्छी बात है।
+अगर फेल हो गया किसके कारण फेल हुआ?
+कुक दो बार गलती कर दिया फेल हो गया।
+ऑर्डर ही नहीं आया अच्छे से तो फेल हो गया।
+डिलीवरी बॉय गलती कर दिया तो उसके कारण फेल हो गया।
+तो ये आपका क्या होगा?
+ये आपका स्टेट होगा जो मेंटेन होगा जो बोर्ड पे दिखेगा हर आदमी को करते हुए।
+एक बार जब अपना ये आर्किटेक्चर आप बना लेते हैं।
+आपके मन में सब चीज आ जाता है।
+तब आप प्रोम्पट लिखना शुरू कर सकते हैं।
+बिना ये सब सोचे, बिना ये सब कॉपी में लिखे और बिना ये सब समझे अगर आप प्र्ट
+लिखने जाएंगे तो गलती हो जाएगी।
+इसके बाद इसके बाद जब हम प्रॉ्ट लिखेंगे अब हम बोल रहे हैं कि जब वो कोड लिखेगा
+उसको टेस्ट कर उसको कोड पढ़ने का मेरे पास नहीं है तरीका।
+हम उसको टेस्ट केसेस भी बताएंगे।
+टेस्ट केसेस बताने का मतलब है कि हम उसको बोलेंगे कि हम आपको भैया सिनेरियो
+देंगे।
+हम आपको सिनेरियो देंगे।
+इसका ये एक्सपेक्टेड रिजल्ट आना चाहिए।
+तुम जब कोड लिख लेना तो मेरे टेस्ट केसेस रन कर लेना।
+अगर सारे टेस्ट पास हो जाते हैं तो कोड अच्छा है।
+हम उसको जाके गिट पे पुश कर देंगे।
+अगर टेस्ट केस फेल हो जाते हैं तो हम लोग फिर मिलके उसको डीबग करेंगे।
+तो किसी भी जब भी आप कोई एलएलएम से कोड लिखवाते हैं तो हमेशा टेस्ट केसेस सोचा
+करिए।
+टेस्ट केसेस का मतलब जैसा लीड कोड में टेस्ट होता है।
+फलाना इनपुट पे फलाना आउटपुट आना चाहिए।
+ऐसे करके तीन-चार टेस्ट केसेस लिखा करिए और उनको सोचा करिए।
+तभी आपको पता चलेगा ना कि जो कोड लिखा है वो सही लिखा है कि नहीं।
+कोड देखने में तो सब सही लगता।
+है।
+देखने में तो आपको कभी लगेगा ही नहीं कि वो गलत कोड लिख सकता है।
+उसको आप पढ़ भी नहीं पाएंगे।
+आपको समझ में भी नहीं आएगा।
+लेकिन टेस्ट केसेस आपको बताता है कि ये सही है या गलत है।
+तो टेस्ट केसेस लिखना बहुत जरूरी है।
+अब चलिए लैपटॉप पे।
+अब हम आपको एक डिटेल्ड प्र लिख के दिखाते हैं कि कैसे प्रम्पट लिखा जाता
+है।
+चलिए आप आ जाइए लैपटॉप पे।
+सबसे पहले तो क्या करते हैं?
+अपना हम फोल्डर बना लेते हैं।
+ठीक है?
+अपना हम फोल्डर एक बना लेते हैं।
+वीक फोर में इसको हम नाम देंगे रेस्ट प्रोजेक्ट।
+ठीक है?
+रेस्ट प्रोजेक्ट नाम देंगे।
+यह अपना बना लेगा।
+इसके अंदर चलते हैं।
+सीडी रेस्ट प्रोजेक्ट अपना हम वीए एनवी शुरू कर देते हैं।
+पython 3.11 ठीक है।
+ओके इसको एक्टिवेट कर लीजिए।
+इसको एक्टिवेट कर लीजिए।
+अब अब अपना हम प्र्ट लिखना शुरू करते हैं।
+तो हम इसमें क्या बनाते हैं कि कोड प्र्प डॉट एमडी।
+एमडी का मतलब होता है मार्क डाउन फाइल।
+ठीक है?
+एमडी का मतलब क्या होता है?
+मार्क डाउन फाइल।
+जिसको आप क्लॉड को बोलते हैं कि हां जी ये ये मेरा प्र्प है।
+ठीक है?
+हम आपको प्र्ट लिख के दिखाते हैं।
+प्र्ट में कोई जादुई चीज नहीं लिखेंगे।
+जो हम आपको पता है वही लिखेंगे।
+डिटेल में।
+ठीक है?
+तो देखिए प्रॉम कैसे लिखा जाता है।
+आई एम बिल्डिंग ए रेस्टोरेंट ऑर्डर मैनेजमेंट एआई एजेंट सिस्टम यूजिंग लैंग
+ग्राफ।
+स्पेलिंग मिस्टेक की चिंता मत किया करिए।
+वो समझ जाएगा।
+ठीक है?
+लंग ग्राफ आई विल अ एक्सप्लेन यू वेरी क्लियरली व्हाट आई वांट एंड व्हाट इज द
+आर्किटेक्चर।
+आई विल आल्सो एक्सप्लेन यू द नोट्स द स्टेट एंड द एजेस इन द एंड इन द एंड आई
+विल गिव यू टेस्ट केसेस टू सिमुलेट एंड टू टेल मी वेदर दे पास और नॉट ओके अब
+शुरू करते हैं लिखना सिस्टम आर्किटेक्चर तो द रफ आर्किटेक्चर द रफ प्लान इज एज
+फॉलो द रफ प्लान इज अच्छा रफ प्लान क्या है मेरा देयर विल बी ए यूजर व्हेन द कोड
+रंस द यूजर विल गिव एन ऑर्डर ऑन ऑर्डर दिस विल बी टेकन एज एन इनपुट वि आई विल
+टाइप ठीक है दिस ऑर्डर शुड गो टू द एलएलएम।
+अच्छा द ऑर्डर एज ऑफ नाउ एज ऑफ नाउ शुड कंटेन डिश एंड द रिक्वायर्ड क्वांटिटी
+रिक्वायर्ड क्वांटिटी।
+अह फॉर सिंपलीसिटी पर्पस फॉर नाउ वी विल लिमिट द ऑर्डर टू वन पर्टिकुलर डिश बहुत
+सारे डिश अभी नहीं करेंगे बाद में करेंगे बाद में एक्सटेंड कर लेंगे एंड
+व्हाटएवर क्वांटिटी द यूजर वांट्स द एलएलएम विल हैव टू एक्सट्रैक्ट द ऑर्डर
+नेम एंड द क्वांटिटी फ्रॉम द यूजर इनपुट इफ द यूजर इनपुट इज अनरिलेटेड टू टू फूड
+ऑर्डरिंग द एलएलएम शुड नॉट अ प्रोसेस दैट एंड टेल द यूजर द सेम थिंग दैट इट
+इज़ एन एआई एजेंट ऑफ फ़ूड ऑर्डरिंग एंड नॉट ए जनरल पर्पस एलएलएम मतलब मतलब
+चार्ट जीपीटी एक जनरल पर्पस एलएलएम चार्ट जीपीटी को आप कुछ भी पूछ सकते
+हैं।
+लेकिन अगर कोई आदमी बना रहा है कि हमको फूड ऑर्डरिंग का एजेंट है तो आप फूड
+ऑर्डरिंग एजेंट से कुछ भी नहीं पूछ सकते तो उसको बता देगा कि भाई आप फूड ऑर्डर
+कीजिए।
+बेकार की बातें मत कीजिए।
+अच्छा वंस द एलएलएम हैज़ ऑर्डर डिश एंड क्वांटिटी इट विल सेंड दैट टू ए नोड
+कॉल्ड ऑर्डर कंफर्म।
+ऑर्डर कंफर्म ये हमारे नोड का काम है।
+ये हमारे नोड का क्या है?
+ये हमारे नोड का नाम है।
+ऑर्डर कंफर्म।
+द TASK OF THIS ORDER CONFIRM IS TO LOOK AT THE MENU.
+I WILL TELL YOU THE MENU LATER IN THIS PROMPT.
+OKAY MEANING WE WILL TELL YOU THE MENU.
+ATCHA THEN THEN THIS NODE WILL DECIDE ONE OF THREE CASES THE ORDER IS
+AVAILABLE THE ORDER IS PARTIALLY AVAILABLE MEANS QUANTITY IS NOT
+SUFFICIENT THE ORDER IS NOT AVAILABLE AT ALL NOT AVAILABLE AT ALL THE ITS
+NOT AVAILABLE AT ALL ITS CASE WE CAN ALSO EXPLAIN THAT DISH BEING NOT IN
+THE MENU OR ZERO QUANTITY AVAILABLE MEANING EITHER DISH IS NOT IN MENU OR
+ZERO QUANTITY AVAILABLE MEANING BURGER NOT EVEN ONE LEFT YOU ARE ASKING FOR
+ONE PIECE BUT NOT EVEN ONE LEFT OKAY IT WILL PUT THIS IN THE STATUS OF THE
+STATE ATCHA WE WILL TELL IT STATE LATER I WILL TELL YOU THE EXACT
+CONTENT OF THE LANGGRAPH STATE AS WELL OKAY ONCE THE LLM RECEIVES THIS IF THE
+STATUS IS CONFIRMED CONFIRMED MEANING FULL AVAILABLE IT SHOULD CALL IT
+SHOULD CALL ANOTHER NODE CALLED COOK ANOTHER NODE CALLED COOK ATCHA JI NOW
+IF THE STATUS IS PARTIAL OR NOT AVAILABLE IT SHOULD AGAIN PROMPT THE
+USER TO DECIDE THE USER CAN EITHER PLACE A NEW ORDER NEW SO MANY SPELLING
+MISTAKES NEW ORDER OR CAN CONFIRM IF HE WANTS TO GO AHEAD WITH THE PARTIAL
+ORDER OKAY THIS ORDER RETRIES WILL BE LIMITED TO THREE ATTEMPTS MEANING IF
+AFTER THREE ATTEMPTS THE USER IS NOT SATISFIED THE SYSTEM WILL COME TO THE
+END NODE RIGHT THREE TIMES AFTER THAT ALSO IF HE DOES NOT UNDERSTAND DOES
+NOT FEEL LIKE CLOSES SYSTEM SO WILL SAY ORDER FROM SOMEWHERE ELSE OKAY NOW
+WHEN THE COOK NODE IS CALLED WHEN THE COOK NODE IS CALLED THERE CAN BE TWO
+CASES THERE CAN BE TWO TWO CASES EITHER THE COOK IS DONE THEN THE
+STATUS WILL BE READY AND IF THE COOK FAILS NOW A QUESTION ARISES HOW TO
+MAKE COOK FAIL MEANING THIS IS NOT A REAL KITCHEN THAT IN REAL IT FAILS SO
+FOR THIS WE SAY WE CAN USE A PROBABILITY FUNCTION PROBABILITY
+FUNCTION WHAT IS THAT WHEN YOU CALL A FUNCTION IF YOU WANT MULTIPLE RESULTS
+NOW IN REAL KITCHEN FAILS THIS THAT HOW IN FUNCTION YOU WRITE SOMETIMES
+FAIL SOMETIMES PASS FOR THIS USE PROBABILITY RANDOM FUNCTION IN THIS
+WHAT HAPPENS COOK FUNCTION WILL RECEIVE COOK WILL ROLL A DICE LUDO
+DICE COOK WILL SAY IF DICE COMES 1 OR 2 COOK IS FAIL IF 3 4 5 6 COOK IS
+SUCCEED SO WHAT HAPPENS 2/6 MEANING 33% CHANCES OF FAIL AND 66% CHANCES OF
+FAIL WE WILL USE A PROBABILITY FUNCTION WE WILL TELL IT GIVE 40%
+CHANCES OF FAIL AND 60% CHANCE OF SUCCESS COOK DONE IF THE COOK FAILS
+THERE SHOULD BE ONE MORE ATTEMPT ALLOWED FOR COOK TO SUCCEED IF THE
+COOK FAILS EVEN AFTER THESE THEN THE LLM SHOULD ISSUE AN APOLOGY THEN THE
+LLM SHOULD ISSUE APOLOGY TO THE USER AND COME TO END STATE COME TO END
+STATE ATCHA END STATE OKAY IF THE COOK SUCCEEDS THE STATUS WILL BE READY AND
+THE NEXT NODE WILL BE CALLED WHICH IS SERV WHICH IS SERV SIMILAR TO COOK
+THIS ALSO HAS TWO CASES SERV PASS OR SERV FAIL MY TYPING HAS BECOME VERY
+BAD SERV FAIL THIS ALSO HAS TWO RETRY ATTEMPTS IF THE SERV FAILS TWO TIMES
+THEN THE LLM THEN THE LLM SHOULD AP THIS WE DO THEN THE LLM SHOULD END
+STATE IF THE SERV SUCCEEDS THE STATUS SHOULD BECOME COMPLETE AND THE LLM
+SHOULD ISSUE A MESSAGE TO THE USER SAYING YOUR ORDER IS COMPLETE IF SERV
+FAILS THEN COOK SHOULD BE CALLED ONE MORE TIME TO RETRY NOTE THAT NOTE THAT
+IF NOTE THAT IF COOK HAS EXHAUSTED ITS RETRY ATTEMPTS MEANING COOK IF ALREADY
+RETRIED BEFORE ALSO THEN IT SHOULD NOT COOK AGAIN AND LLM SHOULD ISSUE AN
+APOLOGY AND COME TO END STATE EVERYTHING IS WRITTEN EVERYTHING
+WRITTEN RIGHT ANYTHING LEFT OUT NOT LEFT OUT OKAY NOW THE STATE NOW THE
+STATE OF LANGGRAPH THERE SHOULD BE AN ANNOTATED ANNOTATED MEANING ANNOTATED
+MEANING FORGOT ANNOTATED MEANING WHAT WHEN WE SAY MESSAGE BETWEEN USER AND
+LLM SO ANNOTATED MEANING USER SAID I WANT CHICKEN BURGER LLM SAID OK WE
+HAVE CHICKEN BURGER SO ALL THIS MESSAGE WILL BE ANNOTATED MEANING
+WRITTEN ONE AFTER ANOTHER NOT THAT IN WRITING YOU WRITE USER LLM MESSAGE NOT
+ERASE USER MESSAGE AND WRITE LLM NO AFTER THAT EXTEND NOT RESET
+UNDERSTANDING ANNOTATED ANNOTATED MEANING USER ONE LINE THEN LLM ONE
+LINE TO WRITE LLM LINE DON'T ERASE USER LINE FROM BOARD SHOW ALL
+CONVERSATION FULL CONVERSATION SHOW THIS THIS HAPPENED USER THIS LINE LLM
+THIS THEN USER THIS LLM THIS DONT ERASE WHAT DOES THAT MEAN ANNOTATED
+THERE SHOULD BE ANNOTATED MESSAGE BETWEEN LLM AND USER OKAY AND WHAT WE
+SAID AND WHAT WE HAD TO SAY ORDER DETAILS THERE SHOULD BE ORDER DETAILS
+DISH NAME AS STRING REQUIRED QUANTITY AS INT AVAILABLE QUANTITY AS STRING
+AND WHAT WE WILL SAY ORDER CONFIRM ORDER CONFIRM WILL WRITE THE AVAILABLE
+QUANTITY BY READING THE MENU BY READING THE MENU THE LLM SHOULD GET TO
+KNOW THE ORDER CONFIRM STATUS BY READING THE STATE UNDERSTAND IF A DISH
+IS NOT AVAILABLE IN THE MENU IF A DISH IS NOT AVAILABLE IN THE MENU THEN
+ORDER CONFIRM SHOULD WRITE ZERO AS AVAILABLE QUANTITY WHAT DOES THAT MEAN
+IF YOU ASK FOR ELEPHANT SANDWICH ORDER CONFIRM WILL WRITE ELEPHANT SANDWICH
+IS AVAILABLE ZERO PIECES SO UNDERSTAND ZERO PIECES MEANING NOT AT ALL
+POSSIBLE GOOD THEN THERE SHOULD BE STATUS EACH NODE WILL UPDATE THE
+STATUS AS SPECIFIED IN THE ABOVE RULES IN THE ABOVE RULES STATUS DONE AND
+WHAT TO DO YES THEN ORDER RETRY ATTEMPTS WHICH ARE THREE COOK RETRY
+ATTEMPTS WHICH ARE TWO SERV RETRY ATTEMPTS WHICH ARE TWO EACH TIME A
+FAILURE HAPPENS AND A NODE IS RETRYING IT SHOULD DECREMENT THE COUNTER
+DECREMENT THE COUNTER IF ANY RETRY COUNTER BECOMES ZERO IT MEANS IT IS
+OVER IT IS OVER MEANING HOW LLM KNOWS WHETHER TO COOK AGAIN OR NOT IF COOK
+RETRY ATTEMPT ZERO LLM KNOWS RETRY ATTEMPT ZERO MEANING DONE TWO TIMES
+NOW DONT DO LLM SHOULD UNDERSTAND UNDERSTAND WHETHER IT HAS TO WHETHER
+IT HAS TO GIVE A RETRY OR ISSUE APOLOGY BY READING THIS COUNTER IN THE
+END THERE SHOULD BE FINAL RESULT WHETHER ORDER WAS COMPLETED OR NOT
+ORDER WAS COMPLETED OR NOT DONE PROMPT TEST CASES LEFT WRITE THE CODE AND ASK
+IF THERE ARE ANY OPEN QUESTIONS MEANING THIS ALWAYS TELL YOUR CLAUDE
+IF NOT CLEAR ANY OPEN QUESTION FROM YOUR SIDE THEN ASK I WILL GIVE YOU
+SOME TEST SCENARIOS TO TEST LATER ON RIGHT SAVE THIS AFTER THIS OPEN YOUR
+CLAUDE NOW SEE NOW I SHOW YOU WRITE CODE READ THIS PROMPT AND WRITE THE
+CODE THATS IT THIS WAY IT IS DONE THIS IS THE WAY NOW SEE HOW MANY LINES 70
+72 LINES PROMPT HOW YOUR PROMPT LOOKS TWO LINES I AM MAKING RESTAURANT AGENT
+OR WRITE CODE SO OBVIOUSLY WRITES WRONG CODE AS MUCH IN DETAIL YOU
+EXPLAIN THAT MUCH BETTER YOUR CLAUDE WRITES CODE OKAY NOW SEE OUR CLAUDE
+STARTED WRITING CODE WAIT TILL WRITING LETS SEE HOW MUCH FOCUS FIVE IS THERE
+SO SOME TIME WILL TAKE BUT WHAT IS THE WAY THAT PROMPT IF YOU WRITE WRITE
+LIKE THIS THIS IS CALLED PROMPT IF SOME PERSON WRITES THIS ANYONE KNOWS
+THIS PERSON KNOWS WHAT TO DO MEANING KNOWS IN HIS MIND EVERYTHING IS THERE
+WRITING CODE WRITING CODE IS NOT A HEAVY TASK IF WE SIT WE CAN WRITE IN
+2-3 HOURS BUT THAT IS TIME WASTE WHEN WE UNDERSTAND WE WILL GET CODE DONE
+GETTING CODE DONE IS LOWEST LEVEL OF ENGINEERING REAL ENGINEERING IS THIS
+WHAT YOU WANT DONE GET IT UNDERSTOOD NOW SEE IT WILL DO SOMETHING ONE
+MISTAKE WE MADE SEE WHAT MISTAKE CLAUDE WILL UNDERSTAND NO MISTAKE WILL
+BE WE DID NOT TELL IN THIS WHAT IS LLM WORK WHAT IS LLM NAME WHICH MODEL TO
+USE OPENAI GPT ONE WE DID NOT TELL DID NOT TELL BUT WILL UNDERSTAND THIS YOU
+SEE INSPECTING THE STRUCTURE SO STRUCTURE INSPECTOR WILL UNDERSTAND
+WHICH MODEL BUT MISTAKE HAPPENED FROM US WE SHOULD HAVE TOLD LLM YOU HAVE TO
+USE GROQ AND LLM KEYS IN MY ENVIRONMENT ALL THAT WE FORGOT TO TELL
+ALL THAT SHOULD HAVE TOLD BUT WILL UNDERSTAND NO MISTAKE WILL BE IF NOT
+UNDERSTAND WILL TELL RIGHT I YES SEE SEE SEE I NOTICE THE PROMPT REFERENCES
+MENU THAT WAS NEVER ACTUALLY WE HERE SAID RIGHT YES SEE WE HERE SAID THAT
+MENU WE WILL TELL YOU MENU NOT TOLD OKAY MENU WE TELL MENU WE TELL OKAY
+INDIAN THIS IS THE MENU SEE MISTAKE CATCHED THATS WHY WE TOLD IT OPEN
+QUESTION IS THERE THEN TELL OPEN QUESTION IS THERE THEN TELL MENU WE
+MAKE MENU WE MAKE BURGER 10 AND PIZZA 20 AND MOMOS FOUR OKAY THIS MENU WE
+MADE OKAY NOW LET IT DO MENU WE WROTE MENU MISTAKE HAPPENED NOW DOING
+SOMETHING SOMETHING NOW LETS SEE WHAT CODE IT WRITES WRITE WRITE WRITE NOW
+LETS SEE WHAT WRITES SOMETHING DOING AT LEAST IN MAIN DOT PI SOMETHING
+WRITTEN LETS SEE IN MAIN DOT PI WHAT WRITTEN WHERE GONE IN MAIN DOT PI SEE
+WRITTEN COME LETS LOOK AT ITS CODE NOW SEE ITS CODE WHAT CAN WRITE EVERYTHING
+DONE OR NOT SEE MODEL WE SAID RIGHT MODEL WILL CATCH HOW CAUGHT BEFORE
+ALSO WRITTEN RIGHT BEFORE ALSO IN EVERY FOLDER THIS MODEL IS THERE RIGHT
+SO WRITTEN RIGHT LLM EQUAL TO THIS THIS SOMETHING DOING WRITTEN MENU
+HIMSELF MADE MENU HIMSELF MADE OKAY FINE LET MAKE MENU HIMSELF MADE SEE
+WHAT IS THIS ORDER RETRIES COOK RETRIES SERV RETRIES RIGHT AND COOK
+SUCCESS PROBABILITY 0.6 ATCHA JI AND WHAT ALL DID STATUS DONE ATCHA STATE
+IN STATE SEE STATE EVERYTHING WRITTEN WHICH WE TOLD WE WANT WRITTEN MESSAGE
+WANTED ORDER WANTED STATUS WANTED ORDER RETRIES FINAL ALL WRITTEN
+INITIAL STATE INITIAL STATE WHAT WRITTEN INITIAL STATE MEANING IN
+BEGINNING HOW YOUR WHITE BOARD LOOKS IN BEGINNING YOUR WHITE BOARD EMPTY IN
+MESSAGES NOTHING WILL BE AND IN ORDER THIS WILL BE IN ORDER RETRIES WHATEVER
+YOUR MACRO THAT WILL BE IN FINAL READ NOTHING WILL BE LLM HELPER MEANING LLM
+WHAT TO UNDERSTAND IF YOU WRITE PARAGRAPH FROM THAT DISH AND QUANTITY
+HOW OUT EXACT PROMPT WRITTEN EXTRACT ORDER WRITTEN SAID OKAY AFTER THAT
+USER INPUT FOR LLM NODE FOR OKAY OKAY OKAY THAT IS MY MEANING NOW YOU WILL
+SAY THAT WE NOW SUPPOSE TEST CASE WILL NOT THINK NOW YOU WILL SAY THAT OKAY
+WE WHATEVER CODE GET WRITTEN WE WILL READ READING WILL TAKE TWO DAYS OKAY
+WE ALSO WILL TAKE WE ARE NOT SAYING WE ARE VERY GREAT THIS CODE TO READ AND
+KNOW WHAT ALL DOING TWO DAYS WILL TAKE YOU THATS WHY VERY CLARITY NEEDED
+THATS WHY YOU ORDER CONFIRM SEE THIS IS A NODE WHY THIS IS NODE BECAUSE IT
+READS STATE AND RETURNS DICTIONARY OUTCOME OKAY THIS OUTCOME THAT IS FOR
+60-40 THAT COOK OUTCOME WHAT CAME SUCCESS CAME OR FAIL CAME COOK A NODE
+SERV A NODE EDGES NOW IN EDGES WHAT IS THERE EDGES MEANING COOK IF FAIL THEN
+WHERE TO GO SUCCESS THEN WHERE TO GO SERV SUCCESS WHERE TO GO ORDER CONFIRM
+FAIL THEN WHERE TO GO SO THAT IS THIS OKAY NOW HERE SEE ALL NODE ADDED ALL
+EDGES ADDED AND EVERYTHING DONE FINALLY RUNNING WHAT DONE OPEN
+QUESTIONS SOME ASKED OKAY OPEN QUESTION SAID MENU MENU WE LEAVE FOR
+IT UNRELATED INPUT I MADE IT TO COST ONE OF THE THREE ORDER ATTEMPTS YEAH
+SO NOW SEE SUPPOSE SOMEONE ASKED TELL TWO SUM CODE LLM WILL SAY THIS IS NOT
+MY WORK BUT YOUR ONE ORDER ATTEMPT GONE IN THAT NOW YOU CAN DO ONLY TWO
+MORE OKAY WE WANT THIS AVAILABLE QUANTITY YOU WROTE A STRING BUT ALSO
+ZERO AS I USED INT YEAH OKAY THAT WAS MISTAKE FROM ME AVAILABLE QUANTITY
+SHOULD BE INT SERV FAIL AND COOK AGAIN MEANING THE COOK ONLY CONSUMES A COOK
+RETRY IF THE COOK FAILS A SUCCESSFUL RECOOK IS FREE IS THAT THE INTENT NO
+THIS WAS NOT INTENT WHAT IS IT SAYING IN RECOOK COOK RETRY CONSUMED NOW WHEN
+SERV SAYING COOK TO RECOOK IN THAT RETRY NOT CONSUMED NO THIS SHOULD BE
+COOK RETRY TWO TIMES NOW THAT BE WHOSE EVER MISTAKE COOK MISTAKE RETRY YES
+COUNTED SERVER RETRY ALSO COUNTED SO WE CORRECT THAT SO WE TELL IT DISH
+MATCHING IS EXACT LOWERCASE MATCH ON THE OKAY DO YOU WANT FUZZY MATCHING
+FUZZY MATCHING WHAT IS IT SEE NOW IF SOME PERSON MARGHERITA PIZZA ORDERED
+MEANING PIZZA WE WANT THAT NOT SO STRICT OKAY WE SAID ONE IS OKAY
+MEANING WE AGREE WITH YOUR MENU TWO IS OKAY THREE IS OKAY FOUR NO COOK RETRY
+MEANS OVERALL TWO ATTEMPTS OVERALL TWO ATTEMPTS DOES NOT MATTER WHOSE MISTAKE
+IT IS MEANING OVERALL TWO RETRIES WHOSEVER MISTAKE AND FIVE YES I WANT
+FUZZY MATCH WRITTEN OKAY NOW THIS WILL CORRECT THAT WHAT OPEN QUESTIONS ASKED
+THAT THIS WILL CORRECT OKAY NOW SEE THIS WILL CORRECT TOKEN LIKE SWIFT
+SWIFT TOKEN FULL RUN DOWN OKAY SO NOW THIS WILL CORRECT AGAIN THIS WE RUN
+AND SEE AND THIS WE OUR SOME TEST CASE WE SAY RUN OKAY AND ITS OUTPUT GIVE US
+WE WE SAY YOU RUN AND TELL OUTPUT OKAY CHECK CHECK CHECK UNTIL WE WRITE OUR
+TEST CASE UNTIL WRITE OUR TEST CASE OKAY THIS MENU WE ERASE BECAUSE MENU
+ITS ONLY USED TC1 USER ASKS UNRELATED QUESTION THEN HE PLACES A ORDER WHICH
+IS PARTIAL THEN HE REJECTS THE PARTIAL AND WANTS TO ORDER AGAIN AGAIN HE
+ORDERS A AGAIN WHAT SAYING WINDOWS CONSOLE IS YEAH OKAY ALL THESE WORDS
+AGAIN SHE ORDER A DISH WHICH IS NOT AVAILABLE EXHAUSTED DUE TO ORDER
+RETRIES MEANING THREE TIMES MISTAKE THREE TIMES YOU DID FIRST YOU ORDERED
+WHICH WAS PARTIAL FIRST UNRELATED QUESTION ONE ATTEMPT SECOND ORDER
+PLACED PARTIAL LLM SAID THIS YOU WANT YOU SAID DONT WANT WE AGAIN PLACE TWO
+DONE THIRD AGAIN YOU SAID SO FINISHED OKAY AFTER THAT IN TC2 A GOOD CASE
+USER PLACES A ORDER WHICH CAN BE AVAILABLE OKAY MAKES IT FAILS ONCE
+COOKS AGAIN SUCCESS SERV FAIL ONCE COOK RETRIES SUCCESS SERV DOES SUCCESS
+OVERALL SUCCESS AND ONE MORE USER ORDERS PARTIAL DOES NOT WANT PARTIAL
+ORDERS AGAIN FULLY AVAILABLE COOK MAKES IT FAILS MAKES AGAIN SUCCESS
+SERV FAILS COOK RETRY SUCCESS SERV FAILS AGAIN COOK DOES NOT RETRY DUE TO
+COOK RETRY EXHAUST OVERALL FAIL THREE CASES RIGHT IN MY OPINION RIGHT ALL
+WRITTEN WE SAY TEST SCENARIOS ARE APPENDED IN PROMPT DOT MD RUN THEM
+THEN TELL ME IF THEY PASS RIGHT THING TEST CASES SEE NOW THIS TEST CASES RUN
+AND TELL IF PASSED TC2 NOT TC3 OKAY YOU UNDERSTOOD TEST CASE WHAT IS TEST
+CASE THREE TYPES OF TEST CASE GAVE YOU WANT GIVE MORE 10 TYPES ACCORDING TO
+YOUR WILL AS MUCH COMPLEX YOU WANT DO THIS SIDE AFTER THAT THAT SIDE
+WHATEVER FEEL LIKE DO NOW LETS SEE IF PASSES OR NOT SOMETHING DOING UNTIL
+THEN LETS SEE IN CODE FUZZY ONE CHANGED OR NOT FUZZY MATCH CHANGED AND
+ABOUT RETRY ALSO WHAT DID RETRY COUNTER OKAY OKAY OKAY OKAY OKAY
+FAILED TWO AFTER OKAY IF STATE COOK RETRY OKAY OKAY I ATCHA ATCHA I
+REALIZE THE RETRY TO FIRST RUN IS THREE EACH RERUN COSTS A RETRY YEAH
+OKAY THAT WORDING HAPPENS WHAT IS IT SAYING FIRST TIME RETRY DOES NOT APPLY
+RETRY APPLIES SECOND TIME SUPPOSE YOU ASKED COOK TO MAKE THAT MAKING ONE
+TIME FAILED THEN ONE MORE TIME RETRY THEN THAT ONE ATTEMPT THAT NOT SECOND
+ATTEMPT THAT ONE RETRY SECOND TIME FAILED THAT SECOND RETRY LAST TIME
+FAILED FINISHED MEANING THIS IS OKAY LET IT DO NO PROBLEM IN THAT THAT ANY
+TIME YOU CHANGE RIGHT NOW LETS SEE MOVE RETRY OKAY OKAY OKAY OKAY OKAY
+NOW LET TEST RUN THEN LETS SEE WHAT DOES PASSED OKAY TC2 NEEDS THREE COOK
+RUN TO SUCCEED YEAH THAT TWO THREE LITTLE MISMATCH ALL THREE TESTS PASS
+SO LIKE THIS YOU CAN MAKE SURE THAT MY CODE IS NOT THAT NOW THIS DOES NOT
+MEAN IN THIS CODE NO BUG THIS CODE ABSOLUTELY PRODUCTION READY NO BUG
+WILL BE BUT ACCORDING TO YOURSELF HOW YOU TEST ACCORDING TO YOURSELF IN THIS
+WAY TEST IF THIS TEST FAILED DEFINITELY BUG THEN CORRECT IT NOW AS
+MUCH COMPLEX TEST YOU WRITE THEN YOU KNOW OKAY IN THIS MUCH ALSO HOLDS
+HOLDS HOLDS BUG IS THERE OR NOT THIS NO ONE CAN TELL THIS WHEN BUG COMES
+THEN YOU KNOW ATCHA THIS ALSO HAPPENED OKAY AS MUCH YOU THINK ACCORDING TO
+THAT YOU HAVE TO DO THIS IS A FULL PROJECT AND THIS IS THE WAY TO GET
+CODE DONE FROM ANY LLM SO WE HOPE THAT INTO MIND ENTERED IN VERY CLEAR WAY
+OKAY LETS MEET IN NEXT VIDEO NEXT WEEK FIVE START THEN COME
